@@ -95,8 +95,8 @@ const techStacks = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
-    name: "SQLServer",
-    src: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
+    name: "MySQL",
+    src: "https://cdn.simpleicons.org/mysql",
   },
   {
     name: "Git",
