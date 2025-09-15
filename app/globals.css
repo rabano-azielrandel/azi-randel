@@ -1,26 +1,54 @@
+/* globals.css */
 @import "tailwindcss";
 
+/* ------------------------------
+   Root Variables for Colors
+------------------------------ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-theme1-primary: #1a1a1a;
+  --color-theme1-secondary: #e8d8c9;
+  --color-theme1-accent1: #4b607f;
+  --color-theme1-accent2: #f3701e;
+  --color-background: #0e0818;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ------------------------------
+   Global Styles
+------------------------------ */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-theme1-secondary);
+  font-family: var(--font-inter), sans-serif; /* Inter is global */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------
+   Tailwind Custom Utilities
+------------------------------ */
+@layer utilities {
+  /* Oswald font utility */
+  .font-oswald {
+    font-family: var(--font-oswald), sans-serif !important;
+  }
+
+  /* Inter font utility (optional if you need to override elsewhere) */
+  .font-inter {
+    font-family: var(--font-inter), sans-serif !important;
+  }
+
+  /* Vertical bottom-to-top text */
+  .text-vertical-bt {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
 }
