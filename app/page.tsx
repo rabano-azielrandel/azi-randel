@@ -8,14 +8,5 @@ import Contacts from "@/components/Contacts";
 
 export default function Home() {
   // main hero -> find me
-  return (
-    <main className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
-      <Hero />
-      <Projects />
-      <Experience />
-      <Hobbies />
-      <Socials />
-      <Contacts />
-    </main>
-  );
+  return <main></main>;
 }
